@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import confetti from 'canvas-confetti';
+import { toast } from 'sonner';
 
 export function WishForm() {
     const [name, setName] = useState('');
@@ -53,16 +54,33 @@ export function WishForm() {
         e.preventDefault();
         if (!name.trim() || !message.trim()) return;
 
+        // Rate limiting check
+        const lastWishTime = localStorage.getItem('lastWishTime');
+        if (lastWishTime) {
+            const timeDiff = Date.now() - parseInt(lastWishTime);
+            if (timeDiff < 60000) { // 60 seconds
+                const remaining = Math.ceil((60000 - timeDiff) / 1000);
+                toast.error(`Bạn gửi nhanh quá! Vui lòng đợi ${remaining} giây nữa nhé.`);
+                return;
+            }
+        }
+
         setSending(true);
         try {
             await addWish(name.trim(), message.trim());
+
+            // Update last wish time
+            localStorage.setItem('lastWishTime', Date.now().toString());
+
             fireConfetti();
             setSent(true);
             setName('');
             setMessage('');
             setTimeout(() => setSent(false), 3000);
+            toast.success('Gửi lời chúc thành công!');
         } catch (error) {
             console.error('Error sending wish:', error);
+            toast.error('Có lỗi xảy ra. Vui lòng thử lại sau.');
         } finally {
             setSending(false);
         }

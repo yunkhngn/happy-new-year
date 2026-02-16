@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="app">
       <div className="lixi-banner">
-        <span>❤️ Nếu bạn thích website này, có thể ủng hộ tớ!</span>
+        <span>🧧 Nếu bạn thích website này, có thể lì xì cho nghệ sĩ trẻ!</span>
         <a href="https://buymeacoffee.com/yunkhngn" target="_blank" rel="noopener noreferrer" className="lixi-button">
-          ☕ Ủng hộ Khoa
+          Lì xì cho Khoa bằng cốc cà phê ☕
         </a>
       </div>
 

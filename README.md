@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Lunar New Year 2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time greeting website for Lunar New Year 2026 with a modern, editorial design.
 
-Currently, two official plugins are available:
+![Thumbnail](public/thumbnail.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Real-time Wishes**: Wishes appear instantly using **Firebase Firestore**.
+- **Editorial Design**: Magazine-style layout with a luxurious Red/Gold/Cream palette.
+- **No Emojis**: Clean and sophisticated aesthetic using design motifs instead of emojis.
+- **Confetti Effect**: Celebratory animation upon successful wish submission.
+- **Spam Protection**: Rate limited to one wish per minute per user.
+- **Responsive**: Beautifully optimized for both desktop and mobile devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: [React](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) v4, [Shadcn UI](https://ui.shadcn.com/)
+- **Backend/Database**: [Firebase Firestore](https://firebase.google.com/)
+- **Effects**: canvas-confetti, sonner (toast notifications)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation & Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Clone repository**:
+    ```bash
+    git clone https://github.com/yunkhngn/happy-new-year-2026.git
+    cd happy-new-year-2026
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3.  **Environment Configuration**:
+    -   Create `.env` from `.env.example`: `cp .env.example .env`
+    -   Fill in your Firebase configuration details in `.env`.
+
+4.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+    Access at `http://localhost:5173`.
+
+## Project Structure
+
+```
+src/
+├── components/         # UI Components (WishList, WishForm, etc.)
+├── lib/                # Firebase config and logic (wishes.ts)
+├── App.tsx             # Main Layout
+├── index.css           # Global styles & Tailwind
+└── main.tsx            # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Author
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**@yunkhngn**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+If you like this project, please consider supporting me:
+-   [Buy Me A Coffee (Lì Xì)](https://buymeacoffee.com/yunkhngn)
+-   [GitHub Profile](https://github.com/yunkhngn)
+
+---
+*Happy New Year 2026 - Year of the Horse!* 🌸
