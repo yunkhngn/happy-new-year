@@ -147,7 +147,7 @@
   background-image:
     radial-gradient(ellipse at 30% 50%, rgba(196, 30, 58, 0.15) 0%, transparent 60%),
     radial-gradient(ellipse at 70% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 60%);
-  padding: 2rem 2rem 1.5rem;
+  padding: 1rem 1rem 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,19 +165,19 @@
 
 .hero-happy {
   font-family: 'Charm', cursive;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: var(--color-red);
   font-weight: 700;
   margin-right: 0.5rem;
   transform: rotate(-5deg);
   display: inline-block;
   position: relative;
-  top: -0.5rem;
+  top: -0.25rem;
 }
 
 .hero-new {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(3rem, 10vw, 7rem);
   font-weight: 900;
   color: #FFFFFF;
   letter-spacing: -0.02em;
@@ -747,7 +747,7 @@
   }
 
   .hero-bg {
-    padding: 1.5rem 1rem 1rem;
+    padding: 1rem 1rem 1rem;
   }
 
   .hero-new {

@@ -5,12 +5,6 @@ import '@/components/CreditLink.css';
 function App() {
   return (
     <div className="app">
-      <div className="lixi-banner">
-        <span>🧧 Nếu bạn thích website này, có thể lì xì cho nghệ sĩ trẻ!</span>
-        <a href="https://buymeacoffee.com/yunkhngn" target="_blank" rel="noopener noreferrer" className="lixi-button">
-          Lì xì cho Khoa bằng cốc cà phê ☕
-        </a>
-      </div>
 
       {/* Hero Header */}
       <header className="hero-header">
@@ -54,13 +48,11 @@ function App() {
             {Array.from({ length: 20 }).map((_, i) => (
               <span key={i} className="marquee-item footer-item">
                 CHÚC MỪNG NĂM MỚI <span className="marquee-dot">✦</span> AN KHANG THỊNH VƯỢNG <span className="marquee-dot">✦</span> VẠN SỰ NHƯ Ý <span className="marquee-dot">✦</span>
+                Made with love by <a href="https://github.com/yunkhngn" target="_blank" rel="noopener noreferrer" className="credit-link">@yunkhngn</a><span className="marquee-dot">✦</span>
               </span>
             ))}
           </div>
         </div>
-        <p className="footer-credit">
-          Made with love by <a href="https://github.com/yunkhngn" target="_blank" rel="noopener noreferrer" className="credit-link">@yunkhngn</a>
-        </p>
       </footer>
     </div>
   );
