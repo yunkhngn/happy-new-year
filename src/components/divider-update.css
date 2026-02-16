@@ -1,0 +1,15 @@
+/* CSS snippet for divider style update */
+.panel-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-red) 20%, var(--color-red) 80%, transparent);
+    margin: 2.5rem 0;
+    /* Updated margin */
+    position: relative;
+    opacity: 0.8;
+}
+
+.panel-divider::after {
+    /* ... existing styles ... */
+    box-shadow: 0 0 10px rgba(196, 30, 58, 0.2);
+}

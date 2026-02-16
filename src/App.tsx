@@ -1,9 +1,17 @@
 import { WishList } from '@/components/WishList';
 import { WishForm } from '@/components/WishForm';
+import '@/components/CreditLink.css';
 
 function App() {
   return (
     <div className="app">
+      <div className="lixi-banner">
+        <span>❤️ Nếu bạn thích website này, có thể ủng hộ tớ!</span>
+        <a href="https://buymeacoffee.com/yunkhngn" target="_blank" rel="noopener noreferrer" className="lixi-button">
+          ☕ Ủng hộ Khoa
+        </a>
+      </div>
+
       {/* Hero Header */}
       <header className="hero-header">
         <div className="hero-bg">
@@ -51,7 +59,7 @@ function App() {
           </div>
         </div>
         <p className="footer-credit">
-          Made with love for Tết Nguyên Đán 2026
+          Made with love by <a href="https://github.com/yunkhngn" target="_blank" rel="noopener noreferrer" className="credit-link">@yunkhngn</a>
         </p>
       </footer>
     </div>

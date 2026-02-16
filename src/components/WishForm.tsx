@@ -71,20 +71,20 @@ export function WishForm() {
     return (
         <div className="wish-form-panel">
             <div className="panel-header">
-                <h2 className="panel-title">Gửi Lời Chúc</h2>
+                <h2 className="panel-title">Gửi lời nhắn tới tớ</h2>
             </div>
 
             <div className="form-decoration">
                 <div className="year-display">
                     <span className="year-number">2026</span>
-                    <span className="year-animal">Năm Bính Ngọ</span>
+                    <span className="year-animal">Happy New Year</span>
                 </div>
             </div>
 
             <form onSubmit={handleSubmit} className="wish-form">
                 <div className="form-group">
                     <label htmlFor="name" className="form-label">
-                        Tên của bạn
+                        Tên của cậu
                     </label>
                     <Input
                         id="name"
@@ -99,7 +99,7 @@ export function WishForm() {
 
                 <div className="form-group">
                     <label htmlFor="message" className="form-label">
-                        Lời chúc Tết
+                        Lời cậu muốn nói
                     </label>
                     <Textarea
                         id="message"
@@ -133,7 +133,7 @@ export function WishForm() {
 
             <div className="form-footer">
                 <p className="footer-text">
-                    Mỗi lời chúc đều mang đến may mắn và hạnh phúc
+                    Send me anything you wanna say that we haven't have chance to say. Wish we all happy new year !!!
                 </p>
             </div>
         </div>

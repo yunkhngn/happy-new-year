@@ -29,7 +29,7 @@ export function WishList() {
         return (
             <div className="wish-list-panel">
                 <div className="panel-header">
-                    <h2 className="panel-title">Lời Chúc Tết</h2>
+                    <h2 className="panel-title">Hàng vạn lời chúc</h2>
                 </div>
                 <div className="wish-loading">
                     <div className="loading-spinner" />
@@ -42,7 +42,7 @@ export function WishList() {
     return (
         <div className="wish-list-panel">
             <div className="panel-header">
-                <h2 className="panel-title">Lời Chúc Tết</h2>
+                <h2 className="panel-title">Hàng vạn lời chúc</h2>
                 <span className="wish-count">{wishes.length} lời chúc</span>
             </div>
 
