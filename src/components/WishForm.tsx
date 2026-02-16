@@ -149,6 +149,13 @@ export function WishForm() {
                 </Button>
             </form>
 
+            <div className="donate-section">
+                <p className="donate-text">🧧 Lì xì cho tớ 👇</p>
+                <div className="donate-image-wrapper">
+                    <img src="/donate.jpeg" alt="QR Donate" className="donate-qr" loading="lazy" />
+                </div>
+            </div>
+
             <div className="form-footer">
                 <p className="footer-text">
                     Send me anything you wanna say that we haven't have chance to say. Wish we all happy new year !!!

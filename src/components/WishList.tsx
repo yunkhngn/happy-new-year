@@ -62,7 +62,15 @@ export function WishList() {
                                 style={{ animationDelay: `${index * 0.05}s` }}
                             >
                                 <div className="wish-card-header">
-                                    <span className="wish-author">{wish.name}</span>
+                                    <div className="wish-user-info">
+                                        <img
+                                            src={`https://cataas.com/cat?width=60&height=60&t=${wish.id}`}
+                                            alt="Avatar"
+                                            className="wish-avatar"
+                                            loading="lazy"
+                                        />
+                                        <span className="wish-author">{wish.name}</span>
+                                    </div>
                                     <span className="wish-time">{formatTime(wish.createdAt)}</span>
                                 </div>
                                 <p className="wish-message">{wish.message}</p>
